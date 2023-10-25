@@ -49,3 +49,21 @@ var search = function(nums, target) {
 
     return -1;
 };
+```
+## Explicação da Solução
+
+Nesta solução:
+
+- **Início**: Começamos com `inicio` e `final` apontando para o começo e o fim do array, respectivamente.
+- **Cálculo do Meio**: Em cada iteração, calculamos o índice do meio usando uma operação de deslocamento à direita, que é mais rápida do que uma divisão regular.
+- **Comparação**: Comparamos o elemento em `meio` com `target`.
+  - **Igualdade**: Se forem iguais, retornamos `meio`.
+  - **Menor que Target**: Se o elemento em `meio` for menor que `target`, movemos `inicio` para `meio + 1`.
+  - **Maior que Target**: Caso contrário, movemos `final` para `meio - 1`.
+- **Resultado**: Se o loop terminar sem retornar, isso significa que `target` não está em `nums`, e retornamos `-1`.
+
+## Estatísticas
+
+- **Aceitos**: 2.1M
+- **Submissões**: 3.6M
+- **Taxa de Aceitação**: 56.7%
