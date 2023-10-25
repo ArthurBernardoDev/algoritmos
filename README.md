@@ -1,69 +1,22 @@
-# Desafio da Busca Binária
+# Melhorando a Capacidade de Solucionar Problemas
 
-## Descrição do Problema
+## Introdução
 
-Dado um array de inteiros `nums` que está ordenado em ordem crescente, e um inteiro `target`, sua tarefa é escrever uma função para buscar o `target` em `nums`. Se o `target` existir, retorne seu índice. Caso contrário, retorne `-1`.
+Olá! O principal objetivo deste repositório é documentar minha jornada para melhorar minha capacidade de solucionar problemas em programação. Aqui, você encontrará soluções, ideias, e reflexões sobre os diversos desafios e problemas que estou enfrentando durante esta jornada.
 
-**O algoritmo deve possuir uma complexidade de tempo O(log n).**
+## Roadmap
 
-### Exemplo 1:
+Estou seguindo o roadmap disponível em [neetcode.io](https://neetcode.io/roadmap). Ele oferece uma estrutura bem definida e um conjunto de recursos que me ajudam a manter o foco e a progressão constante.
 
-- **Entrada**: nums = [-1,0,3,5,9,12], target = 9
-- **Saída**: 4
-- **Explicação**: O número 9 existe em nums e seu índice é 4.
+### Por que seguir um roadmap?
 
-### Exemplo 2:
+A programação, como muitas outras habilidades, se beneficia de uma abordagem estruturada de aprendizado. O roadmap no neetcode.io foi desenhado para cobrir uma variedade de tópicos e desafios, garantindo que eu obtenha uma exposição ampla e uma compreensão profunda de diferentes áreas da programação e resolução de problemas.
 
-- **Entrada**: nums = [-1,0,3,5,9,12], target = 2
-- **Saída**: -1
-- **Explicação**: O número 2 não existe em nums, por isso retorne -1.
+## Compromisso
 
-### Restrições:
+Estou dedicado a me desafiar continuamente e a crescer como programador. Este repositório é um testemunho desse compromisso e da minha jornada. Feedbacks, sugestões ou perguntas são sempre bem-vindos!
 
-- 1 <= tamanho de nums <= 10^4
-- -10^4 < nums[i], target < 10^4
-- Todos os inteiros em nums são únicos.
-- nums está ordenado em ordem crescente.
+## Conclusão
 
-### Solução em JavaScript
+Espero que ao compartilhar minha jornada, possa inspirar outros a embarcar em suas próprias jornadas de aprendizado e crescimento. Juntos, podemos construir uma comunidade mais forte e mais capacitada!
 
-A solução utiliza o conceito de busca binária, que é uma técnica eficiente para encontrar elementos em listas ordenadas. A ideia é reduzir pela metade o número de elementos a serem verificados a cada iteração.
-
-```javascript
-var search = function(nums, target) {
-    let inicio = 0;
-    let final = nums.length - 1;
-    let meio;
-
-    while (inicio <= final) {
-        meio = (inicio + final) >> 1;
-
-        if (nums[meio] === target) return meio;
-
-        if (nums[meio] < target) {
-            inicio = meio + 1;
-        } else {
-            final = meio - 1;
-        }
-    }
-
-    return -1;
-};
-```
-## Explicação da Solução
-
-Nesta solução:
-
-- **Início**: Começamos com `inicio` e `final` apontando para o começo e o fim do array, respectivamente.
-- **Cálculo do Meio**: Em cada iteração, calculamos o índice do meio usando uma operação de deslocamento à direita, que é mais rápida do que uma divisão regular.
-- **Comparação**: Comparamos o elemento em `meio` com `target`.
-  - **Igualdade**: Se forem iguais, retornamos `meio`.
-  - **Menor que Target**: Se o elemento em `meio` for menor que `target`, movemos `inicio` para `meio + 1`.
-  - **Maior que Target**: Caso contrário, movemos `final` para `meio - 1`.
-- **Resultado**: Se o loop terminar sem retornar, isso significa que `target` não está em `nums`, e retornamos `-1`.
-
-## Estatísticas
-
-- **Aceitos**: 2.1M
-- **Submissões**: 3.6M
-- **Taxa de Aceitação**: 56.7%
