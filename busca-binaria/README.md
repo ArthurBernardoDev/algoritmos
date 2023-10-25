@@ -50,6 +50,9 @@ var search = function(nums, target) {
     return -1;
 };
 ```
+### resultado no leetcode
+![image](https://github.com/ArthurBernardoDev/algoritmos/assets/58444730/cbfbaddf-fb0f-4275-bea3-e7d293f501b9)
+
 ## Explicação da Solução
 
 Nesta solução:
