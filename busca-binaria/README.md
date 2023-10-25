@@ -51,7 +51,8 @@ var search = function(nums, target) {
 };
 ```
 ### resultado no leetcode
-![image](https://github.com/ArthurBernardoDev/algoritmos/assets/58444730/cbfbaddf-fb0f-4275-bea3-e7d293f501b9)
+![image](https://github.com/ArthurBernardoDev/algoritmos/assets/58444730/a6dc194c-e018-4484-af19-10e0588c26e6)
+
 
 ## Explicação da Solução
 
