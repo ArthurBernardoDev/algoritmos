@@ -33,8 +33,6 @@ Você poderia minimizar o número total de operações realizadas?
 
 ### Solução em JavaScript
 
-A solução utiliza o conceito de busca binária, que é uma técnica eficiente para encontrar elementos em listas ordenadas. A ideia é reduzir pela metade o número de elementos a serem verificados a cada iteração.
-
 ```javascript
 var moveZeroes = function(nums) {
     let lastZero = 0;
