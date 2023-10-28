@@ -50,6 +50,11 @@ var search = function(nums, target) {
     return -1;
 };
 ```
+## Complexidades
+
+- Complexidade de Tempo: \(O(\log n)\)
+- Complexidade de Espaço: \(O(1)\)
+
 ### resultado no leetcode
 ![image](https://github.com/ArthurBernardoDev/algoritmos/assets/58444730/a6dc194c-e018-4484-af19-10e0588c26e6)
 
@@ -65,6 +70,7 @@ Nesta solução:
   - **Menor que Target**: Se o elemento em `meio` for menor que `target`, movemos `inicio` para `meio + 1`.
   - **Maior que Target**: Caso contrário, movemos `final` para `meio - 1`.
 - **Resultado**: Se o loop terminar sem retornar, isso significa que `target` não está em `nums`, e retornamos `-1`.
+- 
 
 ## Estatísticas
 
